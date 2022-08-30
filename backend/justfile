@@ -1,0 +1,42 @@
+# https://just.systems/man/en/chapter_26.html#dotenv-integration
+set dotenv-load
+# https://just.systems/man/en/chapter_56.html#configuring-the-shell
+set shell := ["zsh", "-uc"]
+# https://just.systems/man/en/chapter_65.html#nodejs-packagejson-script-compatibility
+export PATH := "./node_modules/.bin:" + env_var('PATH')
+# https://just.systems/man/en/chapter_23.html#aliases
+alias pd := populate-districts
+alias pt := populate-trees
+alias m := refresh-materialized
+
+# first recipe in the file will be called when just is run without arguments
+main:
+	echo 'Hello justfile'
+
+populate-districts:
+	node --no-warnings \
+	-r dotenv/config \
+	-r ts-node/register \
+	--loader ts-node/esm \
+	bin/populate-districts.ts
+
+populate-trees:
+	node --no-warnings \
+	-r dotenv/config \
+	-r ts-node/register \
+	--loader ts-node/esm \
+	bin/populate-trees-from-file.ts
+
+refresh-materialized:
+	node --no-warnings \
+	-r dotenv/config \
+	-r ts-node/register \
+	--loader ts-node/esm \
+	bin/refresh-materialized-views.ts
+
+test:
+	node --no-warnings \
+	-r dotenv/config \
+	-r ts-node/register \
+	--loader ts-node/esm \
+	__tests__/client.test.ts
