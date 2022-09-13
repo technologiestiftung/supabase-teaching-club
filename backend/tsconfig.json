@@ -1,5 +1,11 @@
 {
-	"include": ["./bin/*.ts", "__tests__/*.ts"],
+	"include": [
+		"./bin/*.ts",
+		"__tests__/*.ts",
+		"bin/refresh-materialized-views.js",
+		"bin/populate-trees-from-file.js",
+		"bin/populate-districts.js"
+	],
 	"compilerOptions": {
 		/* Visit https://aka.ms/tsconfig to read more about this file */
 

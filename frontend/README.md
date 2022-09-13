@@ -1,4 +1,4 @@
-# A Giessdenkiez.de Clone for a Teaching Club @CityLAB
+# A Giessdenkiez.de Clone for a Supabase Teaching Club @CityLAB
 
 ## Development
 

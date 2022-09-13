@@ -1,5 +1,5 @@
 // @ts-check
-import { sql } from "./_shared/db.js";
+import { sql } from "./shared/db.js";
 
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";

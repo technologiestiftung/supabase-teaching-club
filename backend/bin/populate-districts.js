@@ -1,6 +1,7 @@
 // @ts-check
-import { sql } from "./_shared/db";
+
 import bezirksgrenzen from "../data/bezirksgrenzen.geo.json" assert { type: "json" };
+import { sql } from "./shared/db.js";
 
 const statements = bezirksgrenzen.features.map(async (feature) => {
 	const properties = feature.properties;

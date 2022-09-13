@@ -9,34 +9,26 @@ alias pd := populate-districts
 alias pt := populate-trees
 alias m := refresh-materialized
 
-# first recipe in the file will be called when just is run without arguments
+# first recipe in the file will be called when just is run without arguments. Here it lists the recipies
 main:
-	echo 'Hello justfile'
+	just --list
 
 populate-districts:
-	node --no-warnings \
+	node \
 	-r dotenv/config \
-	-r ts-node/register \
-	--loader ts-node/esm \
-	bin/populate-districts.ts
+	bin/populate-districts.js
 
 populate-trees:
 	node --no-warnings \
 	-r dotenv/config \
-	-r ts-node/register \
-	--loader ts-node/esm \
-	bin/populate-trees-from-file.ts
+	bin/populate-trees-from-file.js
 
 refresh-materialized:
 	node --no-warnings \
 	-r dotenv/config \
-	-r ts-node/register \
-	--loader ts-node/esm \
-	bin/refresh-materialized-views.ts
+	bin/refresh-materialized-views.js
 
 test:
 	node --no-warnings \
 	-r dotenv/config \
-	-r ts-node/register \
-	--loader ts-node/esm \
 	__tests__/client.test.ts
