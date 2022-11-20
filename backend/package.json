@@ -6,7 +6,7 @@
 	"author": "ff6347 <hash@ff6347.email>",
 	"license": "MIT",
 	"devDependencies": {
-		"@supabase/supabase-js": "1.35.6",
+		"@supabase/supabase-js": "2.1.0",
 		"dotenv": "16.0.1",
 		"just-install": "1.0.8",
 		"postgres": "3.2.4",
