@@ -350,7 +350,7 @@ const Home: NextPage = () => {
 							<div>
 								<strong>Tree Type:</strong>{" "}
 								<span id="type">
-									{currentFeature ? currentFeature?.properties?.type : ""}
+									{currentFeature ? currentFeature?.properties?.tree_type : ""}
 								</span>
 							</div>
 							<div>
