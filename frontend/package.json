@@ -13,7 +13,7 @@
     "@supabase/auth-helpers-react": "0.3.1",
     "@supabase/auth-ui-react": "0.2.6",
     "@supabase/ui": "0.36.5",
-    "mapbox-gl": "2.10.0"
+    "mapbox-gl": "3.2.0"
   },
   "devDependencies": {
     "@types/mapbox-gl": "2.7.19",
